@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, #1f1c2c, #928DAB);
+        }
+
+        .calculator{
+            width: 350px;
+            padding: 25px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 40px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+.display{
+    width: 100%;
+    height: 60px;          /* ↓ smaller height */
+    border-radius: 12px; 
+
+    /* Same keypad look */
+    background: linear-gradient(145deg, #3a3a3a, #2b2b2b);
+    box-shadow:
+        inset 4px 4px 12px rgba(0,0,0,0.6),
+        inset -3px -3px 8px rgba(255,255,255,0.08);
+
+    /* Text styling */
+    font-size: 22px;        /* ↓ smaller text */
+    font-weight: 600;
+    color: #ffffffd9;
+    text-align: right;
+    padding: 15px;          /* ↓ padding */
+    letter-spacing: 1px;
+}
+
+
+
+
+
+        .keys{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .btn{
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(145deg, #3a3a3a, #2b2b2b);
+            box-shadow: 
+                5px 5px 15px rgba(0,0,0,0.5),
+                -3px -3px 10px rgba(255,255,255,0.1);
+            transition: 0.2s ease;
+        }
+
+        .btn:hover{
+            transform: translateY(-4px);
+            box-shadow: 
+                8px 8px 20px rgba(0,0,0,0.5),
+                -3px -3px 15px rgba(255,255,255,0.2);
+        }
+
+        .operator{
+            background: linear-gradient(145deg, #ff9500, #cc7a00);
+        }
+
+        .special{
+            background: linear-gradient(145deg, #ff3b30, #c92e25);
+        }
+
+        .equal{
+            background: linear-gradient(145deg, #34c759, #2ca24b);
+            grid-column: span 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+
+        <div id="display" class="display">0</div>
+
+        <div class="keys">
+
+            <button class="btn special btns">C</button>
+            <button class="btn special btns">DEL</button>
+            <button class="btn operator btns">%</button>
+            <button class="btn operator btns">/</button>
+
+            <button class="btn btns">7</button>
+            <button class="btn btns">8</button>
+            <button class="btn btns">9</button>
+            <button class="btn operator btns">*</button>
+
+            <button class="btn btns">4</button>
+            <button class="btn btns">5</button>
+            <button class="btn btns">6</button>
+            <button class="btn operator btns">-</button>
+
+            <button class="btn btns">1</button>
+            <button class="btn btns">2</button>
+            <button class="btn btns">3</button>
+            <button class="btn operator btns">+</button>
+
+            <button class="btn btns">0</button>
+            <button class="btn btns">.</button>
+            <button class="btn equal btns">=</button>
+
+        </div>
+    </div>
+    <script src="calculate.js"></script>
+
+</body>
+</html>

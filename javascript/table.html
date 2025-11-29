@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Table</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+            text-align: center; /* Center everything */
+        }
+
+        h1{
+            margin-bottom: 25px;
+            color: #007bff;
+            font-size: 32px;
+        }
+
+        div{
+            margin-bottom: 20px;
+        }
+
+        input{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 6px;
+            border: 1px solid #999;
+            outline: none;
+            width: 220px;
+            transition: 0.2s;
+        }
+
+        input:focus{
+            border-color: #007bff;
+            box-shadow: 0 0 5px #007bff;
+        }
+
+        button{
+            padding: 10px 18px;
+            background: #007bff;
+            color: white;
+            border: none;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover{
+            background: #0056b3;
+        }
+
+        table{
+            width: 60%;
+            margin: 20px auto; /* Center the table */
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        table th{
+            background: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        table td{
+            padding: 10px;
+        }
+
+        table tr:nth-child(even){
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Information Table</h1>
+
+    <div>
+        <input id="username" type="text" placeholder="Enter your name."/>
+        <input id="age" type="text" placeholder="Enter your age."/>
+        <input id="city" type="text" placeholder="Enter your city."/>
+        <button onclick="addBtn()">Add</button>
+    </div>
+
+    <div>
+        <input id="update" type="text" placeholder="Enter username for update">
+        <button id="upd" onclick="updateBtn()">Update</button>
+
+        <input type="text" placeholder="Enter username for delete" id="dlt">
+        <button onclick="delBtn()">Delete</button>
+    </div>
+
+    <table id="table"></table>
+
+    <script src="table.js"></script>
+
+</body>
+</html>
+
+
